@@ -9,4 +9,3 @@
    <a href = "https://github.com/webdriverio/native-demo-app/releases/download/0.2.1/Android-NativeDemoApp-0.2.1.apk">
     <b>WebdriverIO</b>
    </a> app</li>
-</ol>
