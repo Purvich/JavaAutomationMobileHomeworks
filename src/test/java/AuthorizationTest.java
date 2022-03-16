@@ -58,7 +58,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Ввести валидный пароль
+        //Ввод валидного пароля
 
         MobileElement passwordInput = (MobileElement) driver.findElementByAccessibilityId("input-password");
         passwordInput.sendKeys(password);
@@ -73,7 +73,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Отображается сообщение об успешной регистрации "You are logged in!"
+        //Проверка отображения сообщения об успешной регистрации "You are logged in!"
 
         MobileElement successMessage = (MobileElement) driver.findElementById("android:id/message");
 
@@ -111,7 +111,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Отображаются две ошибке об обязательном заполнении полей eMail и пароль
+        //Проверка отображения двух ошибок об обязательном заполнении полей eMail и пароль
 
         MobileElement errorTextEmailField = (MobileElement) driver
                 .findElementByXPath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view" +
@@ -148,7 +148,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Ввести валидный eMail
+        //Ввод валидного eMail
 
         MobileElement eMailInput = (MobileElement) driver.findElementByAccessibilityId("input-email");
         eMailInput.sendKeys(eMail);
@@ -163,7 +163,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Отображается сообщение об ошибке "Please enter at least 8 characters"
+        //Проверка отображения сообщения об ошибке "Please enter at least 8 characters"
 
         MobileElement errorTextPasswordField = (MobileElement) driver
                 .findElementByXPath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view." +
@@ -195,7 +195,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Ввести валидный пароль
+        //Ввод валидного пароля
 
         MobileElement passwordInput = (MobileElement) driver.findElementByAccessibilityId("input-password");
         passwordInput.sendKeys(password);
@@ -210,7 +210,7 @@ public class AuthorizationTest {
 
         Thread.sleep(2000);
 
-        //Отображается сообщение об ошибке "Please enter a valid email address"
+        //Проверка отображения сообщения об ошибке "Please enter a valid email address"
 
         MobileElement errorTextPasswordField = (MobileElement) driver
                 .findElementByXPath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view." +
