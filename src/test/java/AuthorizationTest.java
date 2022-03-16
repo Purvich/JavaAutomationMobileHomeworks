@@ -2,7 +2,6 @@ import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.springframework.core.annotation.Order;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -29,7 +28,6 @@ public class AuthorizationTest {
 
 
     @Test
-    @Order(1)
     void checkSuccessLogin() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -81,7 +79,6 @@ public class AuthorizationTest {
     }
 
     @Test
-    @Order(2)
     void checkEmptyFields() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -126,7 +123,6 @@ public class AuthorizationTest {
     }
 
     @Test
-    @Order(3)
     void checkEmptyPasswordField() throws MalformedURLException, InterruptedException  {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -173,7 +169,6 @@ public class AuthorizationTest {
     }
 
     @Test
-    @Order(4)
     void checkEmptyEmailField() throws MalformedURLException, InterruptedException  {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
