@@ -2,7 +2,7 @@
 <h3>Homework 2</h3>
 
 <li>Write some 
-   <a href = "https://github.com/Purvich/JavaAutomationMobileHomeworks/blob/master/src/test/java/AuthorizationTest.java">
+   <a href = "https://github.com/Purvich/JavaAutomationMobileHomeworks/blob/master/src/test/java/mobile.authorization.AuthorizationTest.java">
     test cases
    </a>
     for 
