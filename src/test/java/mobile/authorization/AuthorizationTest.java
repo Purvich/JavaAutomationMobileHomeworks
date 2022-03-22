@@ -4,7 +4,6 @@ import mobile.base.BaseTest;
 import mobile.pages.LoginPage;
 import mobile.data.AssertionsData;
 import mobile.data.LoginData;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -21,7 +20,7 @@ public class AuthorizationTest extends BaseTest {
                 .clickOnButtonLogin();
 
         //Проверка popup с сообщением об успешной регистрации
-        Assert.assertEquals(new LoginPage().getSuccessMessageText(), AssertionsData.successLoginText);
+        assertEquals(new LoginPage().getSuccessMessageText(), AssertionsData.successLoginText);
     }
 
     @Test
@@ -31,7 +30,7 @@ public class AuthorizationTest extends BaseTest {
                 .clickOnButtonLogin();
 
         assertEquals(new LoginPage().getErrorTextEmailInput(), AssertionsData.errorTextEmail);
-        assertEquals(new LoginPage().getErrorTextPasswordInput(), AssertionsData.errorTextPassword);
+        assertEquals(new LoginPage().getErrorTextPasswordInputWithCheckInputEmail(), AssertionsData.errorTextPassword);
     }
 
     @Test
@@ -43,7 +42,7 @@ public class AuthorizationTest extends BaseTest {
                 .clickOnButtonLogin();
 
         //Проверка отображения сообщения об ошибке "Please enter at least 8 characters"
-        assertEquals(new LoginPage().getErrorTextPasswordInput(), AssertionsData.errorTextPassword);
+        assertEquals(new LoginPage().getErrorTextPassword(), AssertionsData.errorTextPassword);
     }
 
     @Test

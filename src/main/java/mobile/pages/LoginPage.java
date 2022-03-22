@@ -42,10 +42,16 @@ public class LoginPage extends BaseView {
         return errorTextEmail;
     }
 
-    //Получение текста об обязательности заполнения поля "Password"
-    public String getErrorTextPasswordInput() throws InterruptedException {
-        Thread.sleep(2000);
-        String errorTextPassword = $(locators().errorTextPasswordField()).getText();
-        return errorTextPassword;
+    //Получение текста об обязательности заполнения полей "Password" и "Email"
+    public String getErrorTextPasswordInputWithCheckInputEmail() {
+        String errorTextPasswordWithCheckErrorEmail = $(locators().errorTextPasswordFieldWithEmptyFieldEmail())
+                .getText();
+        return errorTextPasswordWithCheckErrorEmail;
+    }
+
+    //Получение текста об обязательности заполнения полей "Password"
+    public String getErrorTextPassword() {
+        String errorTextPassword;
+        return errorTextPassword = $(locators().errorTextPasswordField()).getText();
     }
 }

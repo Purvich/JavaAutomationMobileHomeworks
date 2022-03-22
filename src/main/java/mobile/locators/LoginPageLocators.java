@@ -24,7 +24,7 @@ public class LoginPageLocators extends BaseView {
 
     //Сообщения об успешной регистрации "You are logged in!"
     public By successMessage() {
-        return By.id("android:id/message");
+        return MobileBy.id("android:id/message");
     }
 
     //Сообщение об обязательности заполнения поля "Email"
@@ -33,10 +33,16 @@ public class LoginPageLocators extends BaseView {
                 "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[1]");
     }
 
+    //Сообщение об обязательности заполнения поля "Password" для совместной проверки с пустым полем "Email"
+    public By errorTextPasswordFieldWithEmptyFieldEmail() {
+        return MobileBy.xpath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]" +
+                "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[2]");
+    }
+
     //Сообщение об обязательности заполнения поля "Password"
     public By errorTextPasswordField() {
         return MobileBy.xpath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]" +
-                "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[2]");
+                "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView");
     }
 
     public LoginPageLocators(MobileDriver driver) {
