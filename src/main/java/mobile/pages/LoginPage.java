@@ -1,15 +1,22 @@
 package mobile.pages;
 
+import com.github.romankh3.image.comparison.ImageComparison;
+import com.github.romankh3.image.comparison.ImageComparisonUtil;
+import com.github.romankh3.image.comparison.model.ImageComparisonResult;
+import com.github.romankh3.image.comparison.model.ImageComparisonState;
 import io.qameta.allure.Step;
-import mobile.base.BaseView;
 import mobile.locators.LoginPageLocators;
 
-import static com.codeborne.selenide.Selenide.$;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
-public class LoginPage extends BaseView {
+import static com.codeborne.selenide.Selenide.$;
+import static org.testng.Assert.assertEquals;
+
+public class LoginPage {
 
     private LoginPageLocators locators() {
-        return new LoginPageLocators(driver);
+        return new LoginPageLocators();
     }
 
     @Step("Заполнение поле \"Email\"")

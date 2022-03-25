@@ -1,15 +1,14 @@
 package mobile.pages;
 
 import io.qameta.allure.Step;
-import mobile.base.BaseView;
 import mobile.locators.HomePageLocators;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class HomePage extends BaseView {
+public class HomePage {
 
     private HomePageLocators locators () {
-        return new HomePageLocators(driver);
+        return new HomePageLocators();
     }
 
     @Step("Тап по кнопке \"Login\" в меню")

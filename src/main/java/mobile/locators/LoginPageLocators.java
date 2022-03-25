@@ -1,11 +1,9 @@
 package mobile.locators;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileDriver;
-import mobile.base.BaseView;
 import org.openqa.selenium.By;
 
-public class LoginPageLocators extends BaseView {
+public class LoginPageLocators {
 
     //Поле "Email"
     public By eMailInput() {
@@ -45,7 +43,7 @@ public class LoginPageLocators extends BaseView {
                 "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView");
     }
 
-    public LoginPageLocators(MobileDriver driver) {
+    public LoginPageLocators() {
         super();
     }
 }
